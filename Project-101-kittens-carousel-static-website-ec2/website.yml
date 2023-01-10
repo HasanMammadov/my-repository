@@ -6,7 +6,7 @@ Description: |
   
 Resources:
 ​
-  WebServerSecurityGroup:
+WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable HTTP and SSH for webserver
