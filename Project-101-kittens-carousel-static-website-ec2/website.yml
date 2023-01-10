@@ -5,7 +5,7 @@ Description: |
 # Parameters:
   
 Resources:
-WebServerSecurityGroup:
+  WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
       GroupDescription: Enable HTTP and SSH for webserver
@@ -19,7 +19,7 @@ WebServerSecurityGroup:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-WebServer:
+  WebServer:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0b5eea76982371e91
