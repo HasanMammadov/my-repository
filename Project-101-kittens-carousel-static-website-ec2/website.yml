@@ -5,7 +5,6 @@ Description: |
 # Parameters:
   
 Resources:
-​
 WebServerSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
@@ -20,15 +19,14 @@ WebServerSecurityGroup:
           FromPort: 80
           ToPort: 80
           CidrIp: 0.0.0.0/0
-
-  WebServer:
+WebServer:
     Type: AWS::EC2::Instance
     Properties:
       ImageId: ami-0b5eea76982371e91
       InstanceType: t2.micro
       KeyName: altaz-clarusway
       SecurityGroupIds: 
-        - !Ref WebServerSecurityGroup
+        - ! Ref WebServerSecurityGroup
       Tags: 
         - Key: Name
           Value: WebServer-Altaz
